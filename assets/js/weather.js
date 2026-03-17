@@ -1,6 +1,6 @@
 // IMPORTANT: Replace with your own OpenWeather API key
 // Get a free key at: https://openweathermap.org/api
-const API_KEY = '78a0fe42b00385baf50185ab236e4269';
+const API_KEY = '94896f2492970d98bc4f60f329c98b6a';
 
 
 const ICONS = {
@@ -15,7 +15,7 @@ async function getWeather(city) {
   if (!city) city = document.getElementById('cityInput').value.trim();
   if (!city) return;
 
-  if (API_KEY === 'YOUR_API_KEY_HERE') {
+  if (API_KEY === '94896f2492970d98bc4f60f329c98b6a') {
     showDemo(city);
     return;
   }
