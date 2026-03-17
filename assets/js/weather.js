@@ -1,6 +1,10 @@
 // OpenWeatherMap API Key
 const API_KEY = '94896f2492970d98bc4f60f329c98b6a';
 
+function getWeather() {
+  const city = document.getElementById('cityInput').value.trim();
+  if (city) fetchWeather(city);
+}
 async function fetchWeather(city) {
   if (!city) return;
 
