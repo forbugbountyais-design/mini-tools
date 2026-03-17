@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MiniAraç — Ücretsiz Online Araçlar | Free Online Tools</title>
+<meta name="description" content="Ücretsiz online araçlar: Not hesaplayıcı, JSON beautify, şifre oluşturucu, QR kod, renk seçici ve hava durumu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="logo">Mini<span>Araç</span></a>
+  <div class="nav-links">
+    <a href="#tools" data-tr="Araçlar" data-en="Tools">Araçlar</a>
+    <a href="tr/weather.html" data-tr="Hava" data-en="Weather">Hava</a>
+    <a href="tr/blog.html" data-tr="Blog" data-en="Blog">Blog</a>
+  </div>
+  <button class="lang-switch" id="langSwitch" onclick="toggleLang()">🌐 EN</button>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge" id="heroBadge">6 Ücretsiz Araç</div>
+    <h1 id="heroTitle">Hızlı. Ücretsiz.<br><span>Çevrimiçi Araçlar.</span></h1>
+    <p id="heroDesc">Not hesapla, JSON düzenle, şifre üret, QR kod oluştur — hepsi tarayıcında, kayıt olmadan.</p>
+    <a href="#tools" class="cta-btn" id="ctaBtn">Araçları Keşfet →</a>
+  </div>
+  <div class="hero-visual">
+    <div class="floating-card c1">{ JSON }</div>
+    <div class="floating-card c2">🔐 ****</div>
+    <div class="floating-card c3">📊 9.5</div>
+    <div class="floating-card c4">☀️ 24°</div>
+  </div>
+</header>
+
+<section id="tools" class="tools-section">
+  <h2 class="section-title" id="toolsTitle">Araçlar</h2>
+  <div class="tools-grid">
+    <a href="tr/not-hesap.html" class="tool-card" data-href-tr="tr/not-hesap.html" data-href-en="en/grade-calc.html">
+      <div class="tool-icon">📊</div>
+      <h3 data-tr="Not Hesaplayıcı" data-en="Grade Calculator">Not Hesaplayıcı</h3>
+      <p data-tr="Sınav puanlarından ortalama hesapla" data-en="Calculate average from exam scores">Sınav puanlarından ortalama hesapla</p>
+      <span class="tool-tag">TR / EN</span>
+    </a>
+    <a href="tr/tools/json-beautify.html" class="tool-card" data-href-tr="tr/tools/json-beautify.html" data-href-en="en/tools/json-beautify.html">
+      <div class="tool-icon">✨</div>
+      <h3 data-tr="JSON Beautify" data-en="JSON Beautify">JSON Beautify</h3>
+      <p data-tr="JSON verisini okunabilir hale getir" data-en="Format JSON data for readability">JSON verisini okunabilir hale getir</p>
+      <span class="tool-tag">TR / EN</span>
+    </a>
+    <a href="tr/tools/json-minify.html" class="tool-card" data-href-tr="tr/tools/json-minify.html" data-href-en="en/tools/json-minify.html">
+      <div class="tool-icon">🗜️</div>
+      <h3 data-tr="JSON Minify" data-en="JSON Minify">JSON Minify</h3>
+      <p data-tr="JSON verisini sıkıştır ve küçült" data-en="Compress and minify JSON data">JSON verisini sıkıştır ve küçült</p>
+      <span class="tool-tag">TR / EN</span>
+    </a>
+    <a href="tr/tools/password-generator.html" class="tool-card" data-href-tr="tr/tools/password-generator.html" data-href-en="en/tools/password-generator.html">
+      <div class="tool-icon">🔐</div>
+      <h3 data-tr="Şifre Oluşturucu" data-en="Password Generator">Şifre Oluşturucu</h3>
+      <p data-tr="Güçlü rastgele şifreler üret" data-en="Generate strong random passwords">Güçlü rastgele şifreler üret</p>
+      <span class="tool-tag">TR / EN</span>
+    </a>
+    <a href="tr/tools/qr-generator.html" class="tool-card" data-href-tr="tr/tools/qr-generator.html" data-href-en="en/tools/qr-generator.html">
+      <div class="tool-icon">📱</div>
+      <h3 data-tr="QR Kod Üretici" data-en="QR Code Generator">QR Kod Üretici</h3>
+      <p data-tr="Metni anında QR koda dönüştür" data-en="Instantly convert text to QR code">Metni anında QR koda dönüştür</p>
+      <span class="tool-tag">TR / EN</span>
+    </a>
+    <a href="tr/tools/color-picker.html" class="tool-card" data-href-tr="tr/tools/color-picker.html" data-href-en="en/tools/color-picker.html">
+      <div class="tool-icon">🎨</div>
+      <h3 data-tr="Renk Seçici" data-en="Color Picker">Renk Seçici</h3>
+      <p data-tr="Hex ve RGB kodlarını görüntüle" data-en="View Hex and RGB color codes">Hex ve RGB kodlarını görüntüle</p>
+      <span class="tool-tag">TR / EN</span>
+    </a>
+  </div>
+</section>
+
+<section class="weather-preview">
+  <div class="wp-inner">
+    <div class="wp-text">
+      <h2 id="wpTitle">Hava Durumu</h2>
+      <p id="wpDesc">Şehrinizdeki anlık hava durumunu öğrenin. OpenWeather API ile güçlendirilmiştir.</p>
+      <a href="tr/weather.html" class="cta-btn outline" id="wpBtn">Hava Durumuna Git →</a>
+    </div>
+    <div class="wp-widget" id="miniWeather">
+      <div class="mini-weather-icon">⛅</div>
+      <div class="mini-weather-info">
+        <span class="mini-city">İstanbul</span>
+        <span class="mini-temp">--°C</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="index.html" class="logo">Mini<span>Araç</span></a>
+    <p id="footerText">© 2025 MiniAraç · Tüm araçlar ücretsiz</p>
+    <div class="footer-links">
+      <a href="tr/blog.html" data-tr="Blog" data-en="Blog">Blog</a>
+      <a href="tr/weather.html" data-tr="Hava Durumu" data-en="Weather">Hava Durumu</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+let currentLang = 'tr';
+function toggleLang() {
+  currentLang = currentLang === 'tr' ? 'en' : 'tr';
+  document.getElementById('langSwitch').textContent = currentLang === 'tr' ? '🌐 EN' : '🌐 TR';
+  document.documentElement.lang = currentLang;
+  document.querySelectorAll('[data-tr]').forEach(el => {
+    el.textContent = el.dataset[currentLang];
+  });
+  document.querySelectorAll('[data-href-tr]').forEach(el => {
+    el.href = el.dataset['href' + currentLang.charAt(0).toUpperCase() + currentLang.slice(1)];
+  });
+  const isEN = currentLang === 'en';
+  document.getElementById('heroBadge').textContent = isEN ? '6 Free Tools' : '6 Ücretsiz Araç';
+  document.getElementById('heroTitle').innerHTML = isEN ? 'Fast. Free.<br><span>Online Tools.</span>' : 'Hızlı. Ücretsiz.<br><span>Çevrimiçi Araçlar.</span>';
+  document.getElementById('heroDesc').textContent = isEN ? 'Calculate grades, format JSON, generate passwords, create QR codes — all in your browser, no signup.' : 'Not hesapla, JSON düzenle, şifre üret, QR kod oluştur — hepsi tarayıcında, kayıt olmadan.';
+  document.getElementById('ctaBtn').textContent = isEN ? 'Explore Tools →' : 'Araçları Keşfet →';
+  document.getElementById('toolsTitle').textContent = isEN ? 'Tools' : 'Araçlar';
+  document.getElementById('wpTitle').textContent = isEN ? 'Weather' : 'Hava Durumu';
+  document.getElementById('wpDesc').textContent = isEN ? 'Get real-time weather for your city. Powered by OpenWeather API.' : 'Şehrinizdeki anlık hava durumunu öğrenin. OpenWeather API ile güçlendirilmiştir.';
+  document.getElementById('wpBtn').textContent = isEN ? 'Go to Weather →' : 'Hava Durumuna Git →';
+  document.getElementById('wpBtn').href = isEN ? 'en/weather.html' : 'tr/weather.html';
+  document.getElementById('footerText').textContent = isEN ? '© 2025 MiniAraç · All tools are free' : '© 2025 MiniAraç · Tüm araçlar ücretsiz';
+}
+</script>
+</body>
+</html>

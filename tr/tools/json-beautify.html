@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON Beautify Online Ücretsiz | MiniAraç</title>
+<meta name="description" content="JSON verisini ücretsiz olarak okunabilir hale getirin. Online JSON formatter aracı.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <a href="../../index.html" class="logo">Mini<span>Araç</span></a>
+  <div class="nav-links">
+    <a href="../../index.html#tools">Araçlar</a>
+    <a href="../weather.html">Hava</a>
+    <a href="../blog.html">Blog</a>
+  </div>
+  <a href="../../en/tools/json-beautify.html" class="lang-switch">🌐 EN</a>
+</nav>
+<main class="tool-page">
+  <a href="../../index.html" class="back-link">← Ana Sayfa</a>
+  <div class="tool-page-header">
+    <span class="icon">✨</span>
+    <h1>JSON Beautify</h1>
+    <p>Bu araç JSON verisini okunabilir ve düzenli hale getirir. Girdiğiniz karmaşık JSON metni güzel bir biçimde formatlanır. Geliştirici ve veri analistleri için vazgeçilmez bir araçtır. Tamamen ücretsiz ve tarayıcıda çalışır, hiçbir veri sunucuya gönderilmez.</p>
+  </div>
+  <div class="tool-box">
+    <span class="label">JSON Girin</span>
+    <textarea id="jsonInput" rows="10" placeholder='{"ad":"Ali","yaş":25,"şehir":"İstanbul"}'></textarea>
+    <div class="btn-row">
+      <button class="btn" onclick="beautify()">Beautify ✨</button>
+      <button class="btn secondary" onclick="copyOutput()">Kopyala</button>
+      <button class="btn secondary" onclick="clearJSON()">Temizle</button>
+    </div>
+  </div>
+  <div class="tool-box">
+    <span class="label">Çıktı</span>
+    <div class="output-box" id="jsonOutput"></div>
+  </div>
+</main>
+<footer class="footer"><div class="footer-inner"><a href="../../index.html" class="logo">Mini<span>Araç</span></a><p style="margin-left:auto;color:var(--muted);font-size:0.85rem">© 2025 MiniAraç</p></div></footer>
+<script>window.LANG='tr';</script>
+<script src="../../assets/js/json-tools.js"></script>
+</body>
+</html>

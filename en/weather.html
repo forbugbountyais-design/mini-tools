@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather Online | MiniAraç</title>
+<meta name="description" content="Get real-time weather for any city. Temperature, humidity and wind speed powered by OpenWeather API.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <a href="../index.html" class="logo">Mini<span>Araç</span></a>
+  <div class="nav-links">
+    <a href="../index.html#tools">Tools</a>
+    <a href="blog.html">Blog</a>
+  </div>
+  <a href="../tr/weather.html" class="lang-switch">🌐 TR</a>
+</nav>
+<main class="weather-page">
+  <a href="../index.html" class="back-link">← Home</a>
+  <div class="tool-page-header">
+    <span class="icon">🌤️</span>
+    <h1>Weather</h1>
+    <p>Get real-time weather for your city. View temperature, humidity and wind speed information.</p>
+  </div>
+  <div class="weather-search">
+    <input type="text" id="cityInput" placeholder="Enter city name... (e.g. London, Istanbul)" style="font-family:var(--font-body);">
+    <button class="btn" onclick="getWeather()">Search 🔍</button>
+  </div>
+  <div class="weather-card" id="weatherCard">
+    <p style="color:var(--muted);text-align:center;padding:2rem;">Search for a city...</p>
+  </div>
+  <div style="margin-top:1.5rem;padding:1rem;background:var(--card);border:1px solid var(--border);border-radius:12px;">
+    <p style="color:var(--muted);font-size:0.82rem;line-height:1.6;">
+      💡 <strong style="color:var(--text);">API Key Setup:</strong> For live weather data, get a free API key at <a href="https://openweathermap.org/api" target="_blank" style="color:var(--accent2);">openweathermap.org</a> and replace <code style="color:var(--accent);">YOUR_API_KEY_HERE</code> in <code>assets/js/weather.js</code>. Demo data is shown for now.
+    </p>
+  </div>
+</main>
+<footer class="footer"><div class="footer-inner"><a href="../index.html" class="logo">Mini<span>Araç</span></a><p style="margin-left:auto;color:var(--muted);font-size:0.85rem">© 2025 MiniAraç · All tools are free</p></div></footer>
+<script>window.LANG='en';</script>
+<script src="../assets/js/weather.js"></script>
+</body>
+</html>

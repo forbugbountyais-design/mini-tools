@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Picker Free Online — Hex RGB HSL | MiniAraç</title>
+<meta name="description" content="Instantly view Hex, RGB and HSL color codes. Free online color picker tool for designers and developers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <a href="../../index.html" class="logo">Mini<span>Araç</span></a>
+  <div class="nav-links">
+    <a href="../../index.html#tools">Tools</a>
+    <a href="../weather.html">Weather</a>
+    <a href="../blog.html">Blog</a>
+  </div>
+  <a href="../../tr/tools/color-picker.html" class="lang-switch">🌐 TR</a>
+</nav>
+<main class="tool-page">
+  <a href="../../index.html" class="back-link">← Home</a>
+  <div class="tool-page-header">
+    <span class="icon">🎨</span>
+    <h1>Color Picker</h1>
+    <p>This tool instantly shows the Hex, RGB and HSL codes for any selected color. It is an extremely handy tool for web designers and developers. You can copy any color code with a single click. Completely free and runs entirely in your browser.</p>
+  </div>
+  <div class="tool-box">
+    <span class="label">Pick a Color</span>
+    <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem;">
+      <input type="color" id="colorInput" value="#f0e040" style="width:80px;height:80px;border:none;border-radius:12px;cursor:pointer;padding:0;background:none;">
+      <p style="color:var(--muted);font-size:0.9rem;">Click the box to open the color picker</p>
+    </div>
+    <div id="colorPreview" class="color-preview" style="background:#f0e040;"></div>
+    <div class="color-values">
+      <div class="color-val" onclick="copyColor('hexVal')" style="cursor:pointer;" title="Click to copy">
+        <span class="label">HEX</span>
+        <div class="val" id="hexVal">#F0E040</div>
+      </div>
+      <div class="color-val" onclick="copyColor('rgbVal')" style="cursor:pointer;" title="Click to copy">
+        <span class="label">RGB</span>
+        <div class="val" id="rgbVal">rgb(240, 224, 64)</div>
+      </div>
+      <div class="color-val" onclick="copyColor('hslVal')" style="cursor:pointer;" title="Click to copy">
+        <span class="label">HSL</span>
+        <div class="val" id="hslVal">hsl(55, 86%, 60%)</div>
+      </div>
+      <div class="color-val" onclick="copyColor('rgbRaw')" style="cursor:pointer;" title="Click to copy">
+        <span class="label">RGB Raw</span>
+        <div class="val" id="rgbRaw">240, 224, 64</div>
+      </div>
+    </div>
+    <p style="color:var(--muted);font-size:0.8rem;margin-top:1rem;">💡 Click any value to copy it</p>
+  </div>
+  <div id="notif" class="notif"></div>
+</main>
+<footer class="footer"><div class="footer-inner"><a href="../../index.html" class="logo">Mini<span>Araç</span></a><p style="margin-left:auto;color:var(--muted);font-size:0.85rem">© 2025 MiniAraç</p></div></footer>
+<script>window.LANG='en';</script>
+<script src="../../assets/js/color-picker.js"></script>
+</body>
+</html>

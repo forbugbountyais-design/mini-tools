@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON Minify Online Ücretsiz | MiniAraç</title>
+<meta name="description" content="JSON verisini sıkıştırın ve küçültün. Ücretsiz online JSON minifier aracı.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <a href="../../index.html" class="logo">Mini<span>Araç</span></a>
+  <div class="nav-links">
+    <a href="../../index.html#tools">Araçlar</a>
+    <a href="../weather.html">Hava</a>
+    <a href="../blog.html">Blog</a>
+  </div>
+  <a href="../../en/tools/json-minify.html" class="lang-switch">🌐 EN</a>
+</nav>
+<main class="tool-page">
+  <a href="../../index.html" class="back-link">← Ana Sayfa</a>
+  <div class="tool-page-header">
+    <span class="icon">🗜️</span>
+    <h1>JSON Minify</h1>
+    <p>Bu araç JSON verisindeki gereksiz boşlukları ve satır sonlarını kaldırarak dosyayı küçültür. API ve web uygulamalarında veri transferini hızlandırmak için idealdir. Büyük JSON dosyalarını saniyeler içinde sıkıştırır. Tamamen ücretsiz ve tarayıcıda çalışır, verileriniz güvendedir.</p>
+  </div>
+  <div class="tool-box">
+    <span class="label">JSON Girin</span>
+    <textarea id="jsonInput" rows="10" placeholder='{"ad": "Ali",&#10;  "yaş": 25,&#10;  "şehir": "İstanbul"&#10;}'></textarea>
+    <div class="btn-row">
+      <button class="btn" onclick="minify()">Minify 🗜️</button>
+      <button class="btn secondary" onclick="copyOutput()">Kopyala</button>
+      <button class="btn secondary" onclick="clearJSON()">Temizle</button>
+    </div>
+  </div>
+  <div class="tool-box">
+    <span class="label">Sıkıştırılmış JSON</span>
+    <div class="output-box" id="jsonOutput"></div>
+  </div>
+</main>
+<footer class="footer"><div class="footer-inner"><a href="../../index.html" class="logo">Mini<span>Araç</span></a><p style="margin-left:auto;color:var(--muted);font-size:0.85rem">© 2025 MiniAraç</p></div></footer>
+<script>window.LANG='tr';</script>
+<script src="../../assets/js/json-tools.js"></script>
+</body>
+</html>

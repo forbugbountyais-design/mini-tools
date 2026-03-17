@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR Code Generator Free Online | MiniAraç</title>
+<meta name="description" content="Instantly convert text or URLs to QR codes for free. No signup required.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <a href="../../index.html" class="logo">Mini<span>Araç</span></a>
+  <div class="nav-links">
+    <a href="../../index.html#tools">Tools</a>
+    <a href="../weather.html">Weather</a>
+    <a href="../blog.html">Blog</a>
+  </div>
+  <a href="../../tr/tools/qr-generator.html" class="lang-switch">🌐 TR</a>
+</nav>
+<main class="tool-page">
+  <a href="../../index.html" class="back-link">← Home</a>
+  <div class="tool-page-header">
+    <span class="icon">📱</span>
+    <h1>QR Code Generator</h1>
+    <p>This tool instantly converts any text or URL into a QR code. You can use it for website links, phone numbers, or any custom message. The generated QR code can be downloaded as a PNG image. Completely free and requires no registration.</p>
+  </div>
+  <div class="tool-box">
+    <span class="label">Text or URL</span>
+    <input type="text" id="qrInput" placeholder="https://example.com or any text..." style="font-family:var(--font-body);margin-bottom:1rem;">
+    <span class="label">Size</span>
+    <select id="qrSize" style="font-family:var(--font-body);margin-bottom:1rem;">
+      <option value="150">Small (150×150)</option>
+      <option value="200" selected>Medium (200×200)</option>
+      <option value="300">Large (300×300)</option>
+      <option value="400">Extra Large (400×400)</option>
+    </select>
+    <div class="btn-row">
+      <button class="btn" onclick="generateQR()">Generate QR 📱</button>
+      <button class="btn secondary" id="dlBtn" style="display:none;">Download ⬇️</button>
+    </div>
+  </div>
+  <div class="tool-box">
+    <span class="label">QR Code</span>
+    <div id="qrOutput" style="display:flex;justify-content:center;padding:2rem;background:white;border-radius:12px;min-height:80px;"></div>
+  </div>
+  <div id="notif" class="notif"></div>
+</main>
+<footer class="footer"><div class="footer-inner"><a href="../../index.html" class="logo">Mini<span>Araç</span></a><p style="margin-left:auto;color:var(--muted);font-size:0.85rem">© 2025 MiniAraç</p></div></footer>
+<script>window.LANG='en';</script>
+<script src="../../assets/js/qr-generator.js"></script>
+</body>
+</html>

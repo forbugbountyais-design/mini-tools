@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON Beautify Free Online | MiniAraç</title>
+<meta name="description" content="Format and beautify JSON data for free online. Instant JSON formatter tool.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <a href="../../index.html" class="logo">Mini<span>Araç</span></a>
+  <div class="nav-links">
+    <a href="../../index.html#tools">Tools</a>
+    <a href="../weather.html">Weather</a>
+    <a href="../blog.html">Blog</a>
+  </div>
+  <a href="../../tr/tools/json-beautify.html" class="lang-switch">🌐 TR</a>
+</nav>
+<main class="tool-page">
+  <a href="../../index.html" class="back-link">← Home</a>
+  <div class="tool-page-header">
+    <span class="icon">✨</span>
+    <h1>JSON Beautify</h1>
+    <p>This tool formats your JSON data into a readable and well-structured format. Complex JSON strings are instantly prettified with proper indentation. It is an essential tool for developers and data analysts. Completely free and runs in the browser — no data is sent to any server.</p>
+  </div>
+  <div class="tool-box">
+    <span class="label">Enter JSON</span>
+    <textarea id="jsonInput" rows="10" placeholder='{"name":"Alice","age":25,"city":"London"}'></textarea>
+    <div class="btn-row">
+      <button class="btn" onclick="beautify()">Beautify ✨</button>
+      <button class="btn secondary" onclick="copyOutput()">Copy</button>
+      <button class="btn secondary" onclick="clearJSON()">Clear</button>
+    </div>
+  </div>
+  <div class="tool-box">
+    <span class="label">Output</span>
+    <div class="output-box" id="jsonOutput"></div>
+  </div>
+</main>
+<footer class="footer"><div class="footer-inner"><a href="../../index.html" class="logo">Mini<span>Araç</span></a><p style="margin-left:auto;color:var(--muted);font-size:0.85rem">© 2025 MiniAraç</p></div></footer>
+<script>window.LANG='en';</script>
+<script src="../../assets/js/json-tools.js"></script>
+</body>
+</html>

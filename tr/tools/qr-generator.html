@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR Kod Üretici Online Ücretsiz | MiniAraç</title>
+<meta name="description" content="Metni veya URL'yi anında QR koda dönüştürün. Ücretsiz online QR kod üretici.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <a href="../../index.html" class="logo">Mini<span>Araç</span></a>
+  <div class="nav-links">
+    <a href="../../index.html#tools">Araçlar</a>
+    <a href="../weather.html">Hava</a>
+    <a href="../blog.html">Blog</a>
+  </div>
+  <a href="../../en/tools/qr-generator.html" class="lang-switch">🌐 EN</a>
+</nav>
+<main class="tool-page">
+  <a href="../../index.html" class="back-link">← Ana Sayfa</a>
+  <div class="tool-page-header">
+    <span class="icon">📱</span>
+    <h1>QR Kod Üretici</h1>
+    <p>Bu araç girdiğiniz metni veya URL'yi anında QR koda dönüştürür. Web sitesi linkleri, telefon numaraları veya herhangi bir metin için kullanabilirsiniz. Oluşturulan QR kodu PNG olarak indirebilirsiniz. Tamamen ücretsiz ve herhangi bir kayıt gerektirmez.</p>
+  </div>
+  <div class="tool-box">
+    <span class="label">Metin veya URL</span>
+    <input type="text" id="qrInput" placeholder="https://example.com veya herhangi bir metin..." style="font-family:var(--font-body);margin-bottom:1rem;">
+    <span class="label">Boyut</span>
+    <select id="qrSize" style="font-family:var(--font-body);margin-bottom:1rem;">
+      <option value="150">Küçük (150×150)</option>
+      <option value="200" selected>Orta (200×200)</option>
+      <option value="300">Büyük (300×300)</option>
+      <option value="400">Çok Büyük (400×400)</option>
+    </select>
+    <div class="btn-row">
+      <button class="btn" onclick="generateQR()">QR Oluştur 📱</button>
+      <button class="btn secondary" id="dlBtn" style="display:none;">İndir ⬇️</button>
+    </div>
+  </div>
+  <div class="tool-box">
+    <span class="label">QR Kod</span>
+    <div id="qrOutput" style="display:flex;justify-content:center;padding:2rem;background:white;border-radius:12px;min-height:80px;"></div>
+  </div>
+  <div id="notif" class="notif"></div>
+</main>
+<footer class="footer"><div class="footer-inner"><a href="../../index.html" class="logo">Mini<span>Araç</span></a><p style="margin-left:auto;color:var(--muted);font-size:0.85rem">© 2025 MiniAraç</p></div></footer>
+<script>window.LANG='tr';</script>
+<script src="../../assets/js/qr-generator.js"></script>
+</body>
+</html>

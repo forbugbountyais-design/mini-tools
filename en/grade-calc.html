@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade Calculator Free Online | MiniAraç</title>
+<meta name="description" content="Free online grade calculator. Enter your exam scores and weights to instantly calculate your course average.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <a href="../index.html" class="logo">Mini<span>Araç</span></a>
+  <div class="nav-links">
+    <a href="../index.html#tools">Tools</a>
+    <a href="weather.html">Weather</a>
+    <a href="blog.html">Blog</a>
+  </div>
+  <a href="../tr/not-hesap.html" class="lang-switch">🌐 TR</a>
+</nav>
+
+<main class="tool-page">
+  <a href="../index.html" class="back-link">← Home</a>
+  <div class="tool-page-header">
+    <span class="icon">📊</span>
+    <h1>Grade Calculator</h1>
+    <p>This tool allows you to quickly calculate your grades. It is easy to use and suitable for all students. Enter your exam scores to find your average. This calculator is completely free and online.</p>
+  </div>
+
+  <div class="tool-box">
+    <span class="label">Exams &amp; Scores</span>
+    <div id="gradeRows">
+      <div class="grade-row">
+        <label>Midterm</label>
+        <input type="number" placeholder="Score (0-100)" min="0" max="100" class="grade-input">
+        <input type="number" placeholder="Weight %" min="0" max="100" class="weight-input" value="40">
+      </div>
+      <div class="grade-row">
+        <label>Final</label>
+        <input type="number" placeholder="Score (0-100)" min="0" max="100" class="grade-input">
+        <input type="number" placeholder="Weight %" min="0" max="100" class="weight-input" value="60">
+      </div>
+    </div>
+    <div class="btn-row">
+      <button class="btn" onclick="calculate()">Calculate</button>
+      <button class="btn secondary" onclick="addRow()">+ Add Exam</button>
+      <button class="btn secondary" onclick="clearAll()">Clear</button>
+    </div>
+  </div>
+
+  <div class="tool-box" id="resultBox" style="display:none">
+    <span class="label">Result</span>
+    <div class="grade-result" id="resultScore">—<span> / 100</span></div>
+    <p id="resultLetter" style="color: var(--muted); margin-top: 0.5rem;"></p>
+  </div>
+  <div id="notif" class="notif"></div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="../index.html" class="logo">Mini<span>Araç</span></a>
+    <p style="margin-left:auto;color:var(--muted);font-size:0.85rem">© 2025 MiniAraç · All tools are free</p>
+  </div>
+</footer>
+
+<script>
+function calculate() {
+  const gradeInputs = document.querySelectorAll('.grade-input');
+  const weightInputs = document.querySelectorAll('.weight-input');
+  let totalWeight = 0, weightedSum = 0, valid = true;
+  gradeInputs.forEach((g, i) => {
+    const grade = parseFloat(g.value);
+    const weight = parseFloat(weightInputs[i].value);
+    if (isNaN(grade) || isNaN(weight)) { valid = false; return; }
+    weightedSum += grade * (weight / 100);
+    totalWeight += weight;
+  });
+  if (!valid || totalWeight === 0) { showNotif('Please fill in all fields!'); return; }
+  const avg = (weightedSum / totalWeight) * 100;
+  const result = Math.round(avg * 10) / 10;
+  document.getElementById('resultScore').innerHTML = result + '<span> / 100</span>';
+  let letter = score >= 90 ? 'A (Excellent)' : score >= 80 ? 'B (Good)' : score >= 70 ? 'C (Average)' : score >= 60 ? 'D (Passing)' : 'F (Fail)';
+  function getLetter(s) {
+    if (s >= 90) return '✅ Grade: A (Excellent)';
+    if (s >= 80) return '✅ Grade: B (Good)';
+    if (s >= 70) return '⚡ Grade: C (Average)';
+    if (s >= 60) return '⚠️ Grade: D (Passing)';
+    return '❌ Grade: F (Fail)';
+  }
+  document.getElementById('resultLetter').textContent = getLetter(result);
+  document.getElementById('resultBox').style.display = 'block';
+}
+function addRow() {
+  const container = document.getElementById('gradeRows');
+  const row = document.createElement('div');
+  row.className = 'grade-row';
+  const count = container.children.length + 1;
+  row.innerHTML = `<label>Exam ${count}</label><input type="number" placeholder="Score (0-100)" min="0" max="100" class="grade-input"><input type="number" placeholder="Weight %" min="0" max="100" class="weight-input" value="20"><button onclick="this.parentElement.remove()" style="background:none;border:none;color:var(--muted);cursor:pointer;font-size:1.2rem;padding:0 0.5rem;">×</button>`;
+  container.appendChild(row);
+}
+function clearAll() {
+  document.querySelectorAll('.grade-input').forEach(i => i.value = '');
+  document.getElementById('resultBox').style.display = 'none';
+}
+function showNotif(msg) {
+  const n = document.getElementById('notif');
+  n.textContent = msg;
+  n.classList.add('show');
+  setTimeout(() => n.classList.remove('show'), 2500);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hava Durumu Online | MiniAraç</title>
+<meta name="description" content="Anlık hava durumu bilgisi. Şehrinizin sıcaklık, nem ve rüzgar bilgilerini öğrenin.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <a href="../index.html" class="logo">Mini<span>Araç</span></a>
+  <div class="nav-links">
+    <a href="../index.html#tools">Araçlar</a>
+    <a href="blog.html">Blog</a>
+  </div>
+  <a href="../en/weather.html" class="lang-switch">🌐 EN</a>
+</nav>
+<main class="weather-page">
+  <a href="../index.html" class="back-link">← Ana Sayfa</a>
+  <div class="tool-page-header">
+    <span class="icon">🌤️</span>
+    <h1>Hava Durumu</h1>
+    <p>Şehrinizdeki anlık hava durumunu öğrenin. Sıcaklık, nem oranı ve rüzgar hızı bilgilerini görüntüleyebilirsiniz.</p>
+  </div>
+  <div class="weather-search">
+    <input type="text" id="cityInput" placeholder="Şehir adı girin... (örn: İstanbul, Ankara)" style="font-family:var(--font-body);">
+    <button class="btn" onclick="getWeather()">Ara 🔍</button>
+  </div>
+  <div class="weather-card" id="weatherCard">
+    <p style="color:var(--muted);text-align:center;padding:2rem;">Bir şehir arayın...</p>
+  </div>
+  <div style="margin-top:1.5rem;padding:1rem;background:var(--card);border:1px solid var(--border);border-radius:12px;">
+    <p style="color:var(--muted);font-size:0.82rem;line-height:1.6;">
+      💡 <strong style="color:var(--text);">API Key Kurulumu:</strong> Gerçek hava durumu verisi için <a href="https://openweathermap.org/api" target="_blank" style="color:var(--accent2);">openweathermap.org</a> adresinden ücretsiz API key alın ve <code style="color:var(--accent);">assets/js/weather.js</code> dosyasındaki <code>YOUR_API_KEY_HERE</code> yerine yapıştırın. Şu an demo verisi gösterilmektedir.
+    </p>
+  </div>
+</main>
+<footer class="footer"><div class="footer-inner"><a href="../index.html" class="logo">Mini<span>Araç</span></a><p style="margin-left:auto;color:var(--muted);font-size:0.85rem">© 2025 MiniAraç</p></div></footer>
+<script>window.LANG='tr';</script>
+<script src="../assets/js/weather.js"></script>
+</body>
+</html>

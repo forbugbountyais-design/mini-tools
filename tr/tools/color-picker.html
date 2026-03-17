@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Renk Seçici Online Ücretsiz | MiniAraç</title>
+<meta name="description" content="Hex, RGB ve HSL renk kodlarını anında görüntüleyin. Ücretsiz online renk seçici aracı.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <a href="../../index.html" class="logo">Mini<span>Araç</span></a>
+  <div class="nav-links">
+    <a href="../../index.html#tools">Araçlar</a>
+    <a href="../weather.html">Hava</a>
+    <a href="../blog.html">Blog</a>
+  </div>
+  <a href="../../en/tools/color-picker.html" class="lang-switch">🌐 EN</a>
+</nav>
+<main class="tool-page">
+  <a href="../../index.html" class="back-link">← Ana Sayfa</a>
+  <div class="tool-page-header">
+    <span class="icon">🎨</span>
+    <h1>Renk Seçici</h1>
+    <p>Bu araç seçtiğiniz rengin Hex, RGB ve HSL kodlarını anında gösterir. Web tasarımcıları ve geliştiriciler için son derece pratik bir araçtır. Renk kodlarını tek tıkla kopyalayabilirsiniz. Tamamen ücretsiz ve tarayıcıda çalışır.</p>
+  </div>
+  <div class="tool-box">
+    <span class="label">Renk Seç</span>
+    <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem;">
+      <input type="color" id="colorInput" value="#f0e040" style="width:80px;height:80px;border:none;border-radius:12px;cursor:pointer;padding:0;background:none;">
+      <p style="color:var(--muted);font-size:0.9rem;">Renk seçmek için kutuya tıklayın</p>
+    </div>
+    <div id="colorPreview" class="color-preview" style="background:#f0e040;"></div>
+    <div class="color-values">
+      <div class="color-val" onclick="copyColor('hexVal')" style="cursor:pointer;" title="Kopyala">
+        <span class="label">HEX</span>
+        <div class="val" id="hexVal">#F0E040</div>
+      </div>
+      <div class="color-val" onclick="copyColor('rgbVal')" style="cursor:pointer;" title="Kopyala">
+        <span class="label">RGB</span>
+        <div class="val" id="rgbVal">rgb(240, 224, 64)</div>
+      </div>
+      <div class="color-val" onclick="copyColor('hslVal')" style="cursor:pointer;" title="Kopyala">
+        <span class="label">HSL</span>
+        <div class="val" id="hslVal">hsl(55, 86%, 60%)</div>
+      </div>
+      <div class="color-val" onclick="copyColor('rgbRaw')" style="cursor:pointer;" title="Kopyala">
+        <span class="label">RGB Ham</span>
+        <div class="val" id="rgbRaw">240, 224, 64</div>
+      </div>
+    </div>
+    <p style="color:var(--muted);font-size:0.8rem;margin-top:1rem;">💡 Değere tıklayarak kopyalayabilirsiniz</p>
+  </div>
+  <div id="notif" class="notif"></div>
+</main>
+<footer class="footer"><div class="footer-inner"><a href="../../index.html" class="logo">Mini<span>Araç</span></a><p style="margin-left:auto;color:var(--muted);font-size:0.85rem">© 2025 MiniAraç</p></div></footer>
+<script>window.LANG='tr';</script>
+<script src="../../assets/js/color-picker.js"></script>
+</body>
+</html>
