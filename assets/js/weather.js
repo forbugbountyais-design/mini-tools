@@ -1,6 +1,7 @@
 // IMPORTANT: Replace with your own OpenWeather API key
 // Get a free key at: https://openweathermap.org/api
-const API_KEY = 'YOUR_API_KEY_HERE';
+const API_KEY = '78a0fe42b00385baf50185ab236e4269';
+
 
 const ICONS = {
   '01d':'☀️','01n':'🌙','02d':'⛅','02n':'🌥️',
